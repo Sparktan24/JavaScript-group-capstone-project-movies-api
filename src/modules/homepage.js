@@ -9,11 +9,13 @@ const displayShows = async () => {
     container.innerHTML += `
         <article>
         <img src=${show.image.medium}>
-        <div>
+        <div class="title">
         <h2>${show.name}</h2>
-        <i class="fa-light fa-heart"></i>
+        <i class="fa-sharp fa-regular fa-heart"></i>
         </div>
-        </article>`;
+        <button class="comment">Comments</button>
+        </article>
+        `;
   });
 };
 
