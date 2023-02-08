@@ -7,7 +7,23 @@
 }
 
 html{
-  background-color: radial-gradient(#000000a3, transparent);;
+  background-color: radial-gradient(#000000a3, transparent);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20%;
+  line-height: 50px;
+}
+
+.fa-circle-play {
+  font-size: 60px;
+}
+
+li :active {
+  text-decoration: underline;
 }
 
 .container{
