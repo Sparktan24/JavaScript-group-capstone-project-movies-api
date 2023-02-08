@@ -6,8 +6,8 @@
   font-weight: 100;
 }
 
-html{
-  background-color: radial-gradient(#000000a3, transparent);
+html {
+  background: radial-gradient(#000000a3, transparent);
 }
 
 ul {
@@ -26,38 +26,38 @@ li :active {
   text-decoration: underline;
 }
 
-.container{
+.container {
   display: grid;
   grid: auto auto / auto auto auto;
   justify-content: space-around;
 }
 
-article{
+article {
   margin-bottom: 10%;
 }
 
-.title{
+.title {
   display: flex;
   justify-content: space-between;
 }
 
-h2{
+h2 {
   font-size: 20px;
 }
 
-.fa-heart{
+.fa-heart {
   margin-top: 12%;
   font-size: 18px;
 }
 
-.comment{
+.comment {
   display: flex;
   border: 2px solid black;
-    padding: 5px 55px;
-    margin: 0 auto;
-    background: transparent;
-    box-shadow: 2px 3px black;
-    font-weight: bold;
+  padding: 5px 55px;
+  margin: 0 auto;
+  background: transparent;
+  box-shadow: 2px 3px black;
+  font-weight: bold;
 }
 
 footer {
