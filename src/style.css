@@ -1,3 +1,28 @@
-h1 {
-  color: orange;
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+
+* {
+  color: black;
+  font-family: 'Paytone One', sans-serif;
+  font-weight: 100;
+}
+
+html{
+  background: radial-gradient(#000000a3, transparent);
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+    margin-right: 20%;
+  line-height: 50px
+}
+
+.fa-circle-play{
+  font-size: 60px;
+}
+
+li :active{
+  text-decoration: underline;
 }
