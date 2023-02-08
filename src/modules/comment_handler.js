@@ -1,7 +1,7 @@
 import showData from './api.js';
 
-const commentButtons = document.querySelector('.comment');
-const descriptionContent = document.querySelector('.description_content');
+//  const commentButtons = document.querySelector('.comment');
+//  const descriptionContent = document.querySelector('.description_content');
 //  commentButtons.onClick = () => generateView();
 
 const getDescription = async () => {
@@ -9,7 +9,6 @@ const getDescription = async () => {
 
   const commentImage = document.querySelector('#comment-image');
   commentImage.src = `${data.image.medium}`;
-  console.log('image link', data.image.medium);
 
   const movieTitle = document.querySelector('.description_content__movie_title');
   movieTitle.innerHTML = `Title: ${data.name}`;
@@ -21,7 +20,8 @@ const getDescription = async () => {
   const ratingGenres = document.querySelector('.rating-genres');
   ratingGenres.innerHTML = 'Genres: ';
   data.genres.forEach((e, index, array) => {
-    const value = index !== array.length - 1 ? ratingGenres.innerHTML += `${e}, ` : ratingGenres.innerHTML += `${e}. `;
+    // eslint-disable-next-line no-unused-expressions
+    index !== array.length - 1 ? ratingGenres.innerHTML += `${e}, ` : ratingGenres.innerHTML += `${e}. `;
 
     /*
     if (index === array.length - 1) {
