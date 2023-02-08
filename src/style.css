@@ -1,29 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
-
 * {
   color: black;
   font-family: 'Paytone One', sans-serif;
   font-weight: 100;
 }
 
-html{
+html {
   background: radial-gradient(#000000a3, transparent);
 }
 
-ul{
+ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
-    margin-right: 20%;
-  line-height: 50px
+  margin-right: 20%;
+  line-height: 50px;
 }
 
-.fa-circle-play{
+.fa-circle-play {
   font-size: 60px;
 }
 
-li :active{
+li :active {
   text-decoration: underline;
 }
 
