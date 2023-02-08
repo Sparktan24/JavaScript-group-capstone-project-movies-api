@@ -26,3 +26,14 @@ ul{
 li :active{
   text-decoration: underline;
 }
+
+footer {
+  color: rgb(255, 255, 255);
+  background-color: rgb(46, 46, 46);
+  padding: 24px 0;
+  box-shadow: rgb(0 0 0 / 31%) 0 5px 11px;
+}
+
+.footer_content {
+  margin-left: 1rem;
+}
