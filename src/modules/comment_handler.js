@@ -4,8 +4,9 @@ import showData from './api.js';
 //  const descriptionContent = document.querySelector('.description_content');
 //  commentButtons.onClick = () => generateView();
 
-const getDescription = async () => {
-  const data = await showData('1899');
+const getDescription = async (title) => {
+  //  console.log('Title: ', title);
+  const data = await showData(title);
 
   const commentImage = document.querySelector('#comment-image');
   commentImage.src = `${data.image.medium}`;
@@ -35,4 +36,4 @@ const getDescription = async () => {
   //  ratingGenres.appendChild(ratingGenres);
 };
 
-getDescription();
+export default getDescription;

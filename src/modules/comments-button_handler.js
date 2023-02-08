@@ -1,3 +1,18 @@
+import getDescription from './comment_handler.js';
+
+window.addEventListener('load', () => { //  Waits until page is loaded completely, including images.
+  const btnComments = document.querySelectorAll('.comment');
+  const popUpContainer = document.querySelector('.comment_pop-up_container');
+  btnComments.forEach((element) => {
+    element.addEventListener('click', () => {
+      //  console.log(element.previousElementSibling.textContent);
+      getDescription(element.previousElementSibling.textContent);
+      popUpContainer.classList.toggle('hidden');
+    });
+  });
+});
+
+/*
 //  WORKING SOLUTION 1
 window.addEventListener('load', () => { //  Waits until page is loaded completely, including images.
   const btnComments = document.querySelector('.comment');
@@ -6,6 +21,7 @@ window.addEventListener('load', () => { //  Waits until page is loaded completel
     popUpContainer.classList.toggle('hidden');
   });
 });
+*/
 
 /*  WORKING SOLUTION 2
 setTimeout(() => {
