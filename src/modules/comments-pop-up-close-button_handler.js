@@ -1,6 +1,6 @@
-const btnComments = document.querySelector('.comment');
+const btnClose = document.querySelector('#close-btn');
 const popUpContainer = document.querySelector('.comment_pop-up_container');
 
-btnComments.addEventListener('click', () => {
+btnClose.addEventListener('click', () => {
   popUpContainer.classList.toggle('hidden');
 });

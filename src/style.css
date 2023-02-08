@@ -15,7 +15,7 @@ footer {
 
 #close-btn {
   position: fixed;
-  right: 5%;
+  right: 8%;
 }
 
 .comment_pop-up_container {
@@ -32,7 +32,7 @@ footer {
 .comment_main-content {
   padding: 2rem;
   background-color: blanchedalmond;
-  width: 95%;
+  width: 85%;
   height: 80%;
 }
 
