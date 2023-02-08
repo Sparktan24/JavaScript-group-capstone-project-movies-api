@@ -26,6 +26,40 @@ li :active {
   text-decoration: underline;
 }
 
+.container {
+  display: grid;
+  grid: auto auto / auto auto auto;
+  justify-content: space-around;
+}
+
+article {
+  margin-bottom: 10%;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.fa-heart {
+  margin-top: 12%;
+  font-size: 18px;
+}
+
+.comment {
+  display: flex;
+  border: 2px solid black;
+  padding: 5px 55px;
+  margin: 0 auto;
+  background: transparent;
+  box-shadow: 2px 3px black;
+  font-weight: bold;
+}
+
 footer {
   color: rgb(255, 255, 255);
   background-color: rgb(46, 46, 46);
