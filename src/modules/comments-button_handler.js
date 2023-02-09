@@ -6,8 +6,9 @@ window.addEventListener('load', () => { //  Waits until page is loaded completel
   //  const id = document.querySelector('.description_content__movie_title');
   btnComments.forEach((element) => {
     element.addEventListener('click', () => {
-      getDescription(element.previousElementSibling.textContent);
-      getComments(element.previousElementSibling.firstElementChild.textContent);
+      getDescription(element.parentElement.id);
+      //  getComments(element.previousElementSibling.firstElementChild.textContent);
+      getComments(element.parentElement.id);
       //  getComments(id.textContent);
       popUpContainer.classList.toggle('hidden');
     });

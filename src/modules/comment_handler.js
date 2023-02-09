@@ -1,8 +1,8 @@
 import showData from './api.js';
 import showDataInvolvement from './comments-pop-up-comments-section_handler.js';
 
-const getDescription = async (title) => {
-  const data = await showData(title);
+const getDescription = async (id) => {
+  const data = await showData(id);
 
   const commentImage = document.querySelector('#comment-image');
   commentImage.src = `${data.image.medium}`;
