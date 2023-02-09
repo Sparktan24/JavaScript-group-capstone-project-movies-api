@@ -1,8 +1,11 @@
-import { showData, showDataInvolvement } from './api.js';
+import { showData, showDataInvolvement, postComment } from './api.js';
 //  import showDataInvolvement from './comments-pop-up-comments-section_handler.js';
 
 const getDescription = async (id) => {
   const data = await showData(id);
+
+  const commentMainContent = document.querySelector('.comment_main-content');
+  commentMainContent.id = data.id;
 
   const commentImage = document.querySelector('#comment-image');
   commentImage.src = `${data.image.medium}`;
@@ -33,5 +36,29 @@ const getComments = async (id) => {
     commentText.appendChild(commentDiv);
   });
 };
+
+const addToAPI = async (id, user, com) => {
+  const data = await postComment(id, user, com);
+  console.log('Data added to api:', data);
+  /* addToDOM(user, score);
+  return { data, status }; */
+};
+
+const form = document.querySelector('#form');
+const userName = document.querySelector('#comment-user-name-input');
+const comment = document.querySelector('#textArea-comment');
+const itemId = document.querySelector('.comment_main-content');
+
+form.onsubmit = (e) => {
+  e.preventDefault();
+  const user = userName.value;
+  const com = comment.value;
+  const { id } = itemId;
+  addToAPI(id, user, com);
+};
+
+/* const postComments = async (id, userName, comments) => {
+
+}; */
 
 export { getDescription, getComments };

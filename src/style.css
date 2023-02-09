@@ -95,13 +95,18 @@ footer {
   padding: 2rem;
   background-color: blanchedalmond;
   width: 85%;
-  height: 80%;
+  height: 90%;
 }
 
-.description_content {
+/* .description_content {
   padding: 0 3rem;
-}
+} */
 
 .hidden {
   display: none;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
 }
