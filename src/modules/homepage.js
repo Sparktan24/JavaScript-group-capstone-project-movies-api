@@ -1,4 +1,4 @@
-import showData from './api';
+import { showData } from './api.js';
 
 //  const shows = ['La Casa de Papel', '1899', 'Dark', 'Stranger Things', 'Squid Game', 'Ginny & Georgia'];
 //  const shows =[327417, 384429, 334824, 305288, 383275, 393625] //Thetvdb ids for each show
