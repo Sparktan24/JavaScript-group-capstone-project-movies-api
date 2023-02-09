@@ -1,17 +1,20 @@
-import getDescription from './comment_handler.js';
+import { getDescription, getComments } from './comment_handler.js';
 
 window.addEventListener('load', () => { //  Waits until page is loaded completely, including images.
   const btnComments = document.querySelectorAll('.comment');
   const popUpContainer = document.querySelector('.comment_pop-up_container');
+  //  const id = document.querySelector('.description_content__movie_title');
   btnComments.forEach((element) => {
     element.addEventListener('click', () => {
-      //  console.log(element.previousElementSibling.textContent);
       getDescription(element.previousElementSibling.textContent);
+      getComments(element.previousElementSibling.firstElementChild.textContent);
+      //  getComments(id.textContent);
       popUpContainer.classList.toggle('hidden');
     });
   });
 });
 
+//  getComments('Dark');
 /*
 //  WORKING SOLUTION 1
 window.addEventListener('load', () => { //  Waits until page is loaded completely, including images.

@@ -3,4 +3,5 @@ const popUpContainer = document.querySelector('.comment_pop-up_container');
 
 btnClose.addEventListener('click', () => {
   popUpContainer.classList.toggle('hidden');
+  document.querySelector('.comments-container').textContent = '';
 });
