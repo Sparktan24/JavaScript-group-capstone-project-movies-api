@@ -96,12 +96,8 @@ footer {
   background-color: blanchedalmond;
   width: 85%;
   height: 90%;
-  overflow: overlay;
+  overflow: auto;
 }
-
-/* .description_content {
-  padding: 0 3rem;
-} */
 
 .hidden {
   display: none;
@@ -113,6 +109,6 @@ footer {
 }
 
 #posted-comments {
-  overflow: overlay;
+  overflow: auto;
   height: 10vh;
 }
