@@ -30,6 +30,7 @@ const getComments = async (id) => {
   const data = await showDataInvolvement(id);
   const commentText = document.querySelector('.comments-container');
   const commentDiv = document.createElement('div');
+  commentDiv.id = 'posted-comments';
   commentDiv.innerHTML = '';
   Object.keys(data).forEach((key) => {
     commentDiv.innerHTML += `${data[key].creation_date} ${data[key].username}: ${data[key].comment}. <br>`;
@@ -38,10 +39,9 @@ const getComments = async (id) => {
 };
 
 const addToAPI = async (id, user, com) => {
-  const data = await postComment(id, user, com);
-  console.log('Data added to api:', data);
-  /* addToDOM(user, score);
-  return { data, status }; */
+  const status = await postComment(id, user, com);
+  if (status !== 201) return `Error ${status}`;
+  return status;
 };
 
 const form = document.querySelector('#form');
@@ -57,17 +57,10 @@ form.onsubmit = (e) => {
   const com = comment.value;
   const { id } = itemId;
   addToAPI(id, user, com);
+  //  postComment(id, user, com);
   commentText.firstChild.remove();
   getComments(id);
   form.reset();
 };
-
-/* const updateComments = () => {
-  $('.comments-container'.load(window.location.href + 'comments-container'));
-}; */
-
-/* const postComments = async (id, userName, comments) => {
-
-}; */
 
 export { getDescription, getComments };

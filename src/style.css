@@ -96,6 +96,7 @@ footer {
   background-color: blanchedalmond;
   width: 85%;
   height: 90%;
+  overflow: overlay;
 }
 
 /* .description_content {
@@ -109,4 +110,9 @@ footer {
 #form {
   display: flex;
   flex-direction: column;
+}
+
+#posted-comments {
+  overflow: overlay;
+  height: 10vh;
 }
