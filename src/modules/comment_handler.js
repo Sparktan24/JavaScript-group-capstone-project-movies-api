@@ -1,39 +1,66 @@
-import showData from './api.js';
+import { showData, showDataInvolvement, postComment } from './api.js';
+//  import showDataInvolvement from './comments-pop-up-comments-section_handler.js';
 
-//  const commentButtons = document.querySelector('.comment');
-//  const descriptionContent = document.querySelector('.description_content');
-//  commentButtons.onClick = () => generateView();
+const getDescription = async (id) => {
+  const data = await showData(id);
 
-const getDescription = async (title) => {
-  //  console.log('Title: ', title);
-  const data = await showData(title);
+  const commentMainContent = document.querySelector('.comment_main-content');
+  commentMainContent.id = data.id;
 
   const commentImage = document.querySelector('#comment-image');
   commentImage.src = `${data.image.medium}`;
 
   const movieTitle = document.querySelector('.description_content__movie_title');
-  movieTitle.innerHTML = `Title: ${data.name}`;
+  movieTitle.innerHTML = `${data.name}`;
 
   const description = document.querySelector('#description');
   description.innerHTML = data.summary;
-  //  descriptionContent.appendChild(description);
 
   const ratingGenres = document.querySelector('.rating-genres');
   ratingGenres.innerHTML = 'Genres: ';
   data.genres.forEach((e, index, array) => {
     // eslint-disable-next-line no-unused-expressions
     index !== array.length - 1 ? ratingGenres.innerHTML += `${e}, ` : ratingGenres.innerHTML += `${e}. `;
-
-    /*
-    if (index === array.length - 1) {
-      ratingGenres.innerHTML += `${e}. `;
-    } else {
-      ratingGenres.innerHTML += `${e}, `;
-    }
-    */
   });
   ratingGenres.innerHTML += `Rate: ${data.rating.average}`;
-  //  ratingGenres.appendChild(ratingGenres);
 };
 
-export default getDescription;
+const getComments = async (id) => {
+  //  console.log('ID', id);
+  const data = await showDataInvolvement(id);
+  const commentText = document.querySelector('.comments-container');
+  const commentDiv = document.createElement('div');
+  commentDiv.id = 'posted-comments';
+  commentDiv.innerHTML = '';
+  Object.keys(data).forEach((key) => {
+    commentDiv.innerHTML += `${data[key].creation_date} ${data[key].username}: ${data[key].comment}. <br>`;
+    commentText.appendChild(commentDiv);
+  });
+};
+
+const addToAPI = async (id, user, com) => {
+  const status = await postComment(id, user, com);
+  if (status !== 201) return `Error ${status}`;
+  return status;
+};
+
+const form = document.querySelector('#form');
+const userName = document.querySelector('#comment-user-name-input');
+const comment = document.querySelector('#textArea-comment');
+const itemId = document.querySelector('.comment_main-content');
+
+form.onsubmit = (e) => {
+  const commentText = document.querySelector('.comments-container');
+
+  e.preventDefault();
+  const user = userName.value;
+  const com = comment.value;
+  const { id } = itemId;
+  addToAPI(id, user, com);
+  //  postComment(id, user, com);
+  commentText.firstChild.remove();
+  getComments(id);
+  form.reset();
+};
+
+export { getDescription, getComments };
