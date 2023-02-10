@@ -1,5 +1,11 @@
 import { showData, addLike, getLikes } from './api';
 
+const showsCount = () => {
+  const shows = document.querySelectorAll('.article').length;
+  const addCount = document.querySelector('.count-shows');
+  addCount.innerHTML = `Top binge-worthy shows (${shows})`;
+};
+
 const shows = ['La Casa de Papel', '1899', 'Dark', 'Stranger Things', 'Squid Game', 'Ginny & Georgia'];
 
 const displayShows = async () => {
@@ -10,7 +16,7 @@ const displayShows = async () => {
     const likes = likesArr.find((el) => el.item_id === id) || { likes: '0' };
     const container = document.querySelector('.container');
     container.innerHTML += `
-        <article id"${show.id}">
+        <article id"${show.id} class"article">
         <img src=${show.image.medium}>
         <div class="title">
         <h2>${show.name}</h2>
@@ -21,6 +27,7 @@ const displayShows = async () => {
         </article>
         `;
   });
+  showsCount()
 };
 
 const updateDOM = (id) => {
@@ -47,6 +54,8 @@ const addLikesEvLis = async () => {
 };
 
 addLikesEvLis();
+
+export default showsCount;
 
 // const show = [];
 
