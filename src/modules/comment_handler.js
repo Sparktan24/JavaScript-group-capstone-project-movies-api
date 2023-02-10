@@ -1,4 +1,4 @@
-import showData from './api.js';
+import { showData } from './api.js';
 
 //  const commentButtons = document.querySelector('.comment');
 //  const descriptionContent = document.querySelector('.description_content');
