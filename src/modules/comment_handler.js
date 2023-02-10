@@ -50,12 +50,21 @@ const comment = document.querySelector('#textArea-comment');
 const itemId = document.querySelector('.comment_main-content');
 
 form.onsubmit = (e) => {
+  const commentText = document.querySelector('.comments-container');
+
   e.preventDefault();
   const user = userName.value;
   const com = comment.value;
   const { id } = itemId;
   addToAPI(id, user, com);
+  commentText.firstChild.remove();
+  getComments(id);
+  form.reset();
 };
+
+/* const updateComments = () => {
+  $('.comments-container'.load(window.location.href + 'comments-container'));
+}; */
 
 /* const postComments = async (id, userName, comments) => {
 

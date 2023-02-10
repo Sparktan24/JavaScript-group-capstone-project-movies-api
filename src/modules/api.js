@@ -19,14 +19,14 @@ const postComment = async (showId, userName, comments) => {
   const resFetch = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments`, {
     method: 'POST',
     headers: {
-      'content-type': 'application/json',
+      'content-type': 'application/json; charset=UTF-8',
     },
     body: JSON.stringify({ item_id: showId, username: userName, comment: comments }),
   });
-  const data = await resFetch.json();
+  //const data = await resFetch.json();
   //  const { status } = resFetch;
   //return { data, status };
-  return data;
+  //return data;
 };
 
 export { showData, showDataInvolvement, postComment };
