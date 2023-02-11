@@ -1,6 +1,14 @@
 //  TVMaze API
 const showData = async (query) => {
-  const url = `https://api.tvmaze.com/shows/${query}`;
+  // const url = `https://api.tvmaze.com/shows/${query}`;
+  const url = `https://api.tvmaze.com/singlesearch/shows?q=${query}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+};
+
+const getLikes = async () => {
+  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OX5sTwXK5eU2vy1wOpri/likes';
   const response = await fetch(url);
   const data = await response.json();
   return data;
@@ -27,4 +35,6 @@ const postComment = async (showId, userName, comments) => {
   return status;
 };
 
-export { showData, showDataInvolvement, postComment };
+export {
+  showData, showDataInvolvement, postComment, getLikes,
+};

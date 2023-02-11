@@ -7,7 +7,9 @@ window.addEventListener('load', () => { //  Waits until page is loaded completel
   //  const id = document.querySelector('.description_content__movie_title');
   btnComments.forEach((element) => {
     element.addEventListener('click', () => {
-      getDescription(element.parentElement.id);
+      console.log('enter');
+      //getDescription(element.parentElement.id);
+      getDescription(element.previousElementSibling.firstElementChild.textContent);
       //  getComments(element.previousElementSibling.firstElementChild.textContent);
       getComments(element.parentElement.id);
       //  getComments(id.textContent);

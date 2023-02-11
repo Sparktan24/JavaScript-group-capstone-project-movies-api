@@ -46,5 +46,8 @@
   },
   "dependencies": {
     "lodash": "^4.17.21"
-  }
+  },
+  "jest":{
+    "testEnvironment": "jsdom"
+}
 }

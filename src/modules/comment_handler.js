@@ -1,6 +1,13 @@
 import { showData, showDataInvolvement, postComment } from './api.js';
 //  import showDataInvolvement from './comments-pop-up-comments-section_handler.js';
 
+const showDataPopUp = async (query) => {
+  const url = `https://api.tvmaze.com/singlesearch/shows/${query}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+};
+
 const getDescription = async (id) => {
   const data = await showData(id);
 

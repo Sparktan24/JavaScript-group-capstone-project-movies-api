@@ -10,16 +10,29 @@ html {
   background: radial-gradient(#000000a3, transparent);
 }
 
+header {
+  margin-bottom: 4%;
+  background: darkgray;
+}
+
 ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin-right: 20%;
+  margin-right: 12%;
   line-height: 50px;
+  margin-top: 0;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  margin-bottom: 0;
+}
+
+li {
+  font-size: larger;
 }
 
 .fa-circle-play {
-  font-size: 60px;
+  font-size: 50px;
 }
 
 li :active {
@@ -46,8 +59,18 @@ h2 {
 }
 
 .fa-heart {
-  margin-top: 12%;
-  font-size: 18px;
+  margin-top: 40%;
+  font-size: 20px;
+  margin-left: 35%;
+}
+
+.like:hover {
+  color: #ff0000bf;
+}
+
+.likes {
+  display: flex;
+  flex-direction: column;
 }
 
 .comment {
@@ -65,14 +88,22 @@ body {
 }
 
 footer {
-  color: rgb(255, 255, 255);
-  background-color: rgb(46, 46, 46);
+  margin-top: 4%;
+  background: darkgray;
   padding: 24px 0;
   box-shadow: rgb(0 0 0 / 31%) 0 5px 11px;
 }
 
 .footer_content {
-  margin-left: 1rem;
+  margin-left: 3rem;
+  font-size: larger;
+}
+
+.footer-description {
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 #close-btn {
