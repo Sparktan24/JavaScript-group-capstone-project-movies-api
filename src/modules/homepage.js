@@ -2,16 +2,17 @@ import { showData, getLikes } from './api';
 // involvement API for POST
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OX5sTwXK5eU2vy1wOpri/likes';
 
-const shows = [27436, 39749, 17861, 2993, 43687, 47549]; //  TVmaze ids
+// const shows = [27436, 39749, 17861, 2993, 43687, 47549]; //  TVmaze ids
+const tvShows = ['La Casa de Papel', '1899', 'Dark', 'Stranger Things', 'Squid Game', 'Ginny & Georgia'];
 
 const show = [];
 
 export const showInfo = async () => {
-  for (let i = 0; i < shows.length; i += 1) {
+  for (let i = 0; i < tvShows.length; i += 1) {
     /*eslint-disable */
 
     //suppress all warnings between comments
-    const data = await showData([shows[i]]); 
+    const data = await showData([tvShows[i]]); 
 
     /* eslint-enable */
     show.push(data);
