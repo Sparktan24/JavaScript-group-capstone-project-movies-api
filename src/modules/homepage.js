@@ -8,7 +8,12 @@ const show = [];
 
 export const showInfo = async () => {
   for (let i = 0; i < shows.length; i += 1) {
-    const data = await showData([shows[i]]);
+    /*eslint-disable */
+
+    //suppress all warnings between comments
+    const data = await showData([shows[i]]); 
+
+    /* eslint-enable */
     show.push(data);
   }
   return show;
