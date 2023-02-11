@@ -7,6 +7,12 @@ const tvShows = ['La Casa de Papel', '1899', 'Dark', 'Stranger Things', 'Squid G
 
 const show = [];
 
+const showsCount = async () => {
+  const shows = document.querySelectorAll('.article').length;
+  const addCount = document.querySelector('.count-shows');
+  addCount.innerHTML = `Top binge-worthy shows (${shows})`;
+};
+
 export const showInfo = async () => {
   for (let i = 0; i < tvShows.length; i += 1) {
     /*eslint-disable */
@@ -62,7 +68,7 @@ const displayShows = async () => {
   container.innerHTML = '';
   for (let i = 0; i < show.length; i += 1) {
     container.innerHTML += `
-        <article>
+        <article class="article">
         <img src=${show[i].image.medium}>
         <div class="title" id="${show[i].id}">
         <h2>${show[i].name}</h2>
@@ -76,6 +82,7 @@ const displayShows = async () => {
         `;
   }
   likeBtn();
+  showsCount();
 };
 
-export { showInfo, displayShows };
+export default displayShows;
