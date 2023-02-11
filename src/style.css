@@ -126,13 +126,20 @@ footer {
   padding: 2rem;
   background-color: blanchedalmond;
   width: 85%;
-  height: 80%;
-}
-
-.description_content {
-  padding: 0 3rem;
+  height: 90%;
+  overflow: auto;
 }
 
 .hidden {
   display: none;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+#posted-comments {
+  overflow: auto;
+  height: 10vh;
 }
