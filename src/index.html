@@ -6,8 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://kit.fontawesome.com/db139aff16.js" crossorigin="anonymous"></script>
-  <title>Document</title>
-  <script src="https://kit.fontawesome.com/db139aff16.js" crossorigin="anonymous"></script>
+  <title>Tv Shows</title>
 </head>
 
 <body>
@@ -15,48 +14,40 @@
     <nav>
       <ul>
         <li><i class="fa-solid fa-circle-play"></i></li>
-        <li>Top binge-worthy shows</li>
+        <a href="index.html">
+          <li class="count-shows"></li>
+        </a>
         <li>Best of 2022</li>
         <li>Mark your Calender</li>
       </ul>
     </nav>
   </header>
   <main class="container"></main>
-    <div class="comment_pop-up_container hidden">
-      <div class="comment_main-content">
-        <section class="description_content">
-          <img id="comment-image" src="" alt="" />
-          <button id="close-btn">⨯</button>
-          <h2 class="description_content__movie_title"></h2>
-          <div class="rating-genres"></div>
-          <h3>Description:</h3>
-          <p id="description"></p>
-        </section>
+  <div class="comment_pop-up_container hidden">
+    <div class="comment_main-content">
+      <section class="description_content">
+        <img id="comment-image" src="" alt="" />
+        <button id="close-btn">⨯</button>
+        <h2 class="description_content__movie_title"></h2>
+        <div class="rating-genres"></div>
+        <h3>Description:</h3>
+        <p id="description"></p>
+      </section>
 
-        <section class="comments-section">
-          <h3>Comments (N)</h3>
-          <div class="comments-container"></div>
-          <div class="add-comments-container">
-            <h3>Add a comment</h3>
-            <form id="form" action="" method="post">
-              <input
-                id="comment-user-name-input"
-                type="text"
-                placeholder="Your name"
-              />
-              <textarea
-                name="comment"
-                id="textArea-comment"
-                cols="30"
-                rows="3"
-                placeholder="Your insights"
-              ></textarea>
-              <button id="btn-input-comment">Comment</button>
-            </form>
-          </div>
-        </section>
-      </div>
+      <section class="comments-section">
+        <h3>Comments (N)</h3>
+        <div class="comments-container"></div>
+        <div class="add-comments-container">
+          <h3>Add a comment</h3>
+          <form id="form" action="" method="post">
+            <input id="comment-user-name-input" type="text" placeholder="Your name" />
+            <textarea name="comment" id="textArea-comment" cols="30" rows="3" placeholder="Your insights"></textarea>
+            <button id="btn-input-comment">Comment</button>
+          </form>
+        </div>
+      </section>
     </div>
+  </div>
   </div>
 </body>
 
