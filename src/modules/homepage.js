@@ -1,5 +1,5 @@
 import { showData, getLikes } from './api';
-//involvement API for POST
+// involvement API for POST
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OX5sTwXK5eU2vy1wOpri/likes';
 
 const shows = ['La Casa de Papel', '1899', 'Dark', 'Stranger Things', 'Squid Game', 'Ginny & Georgia'];
@@ -7,9 +7,9 @@ const shows = ['La Casa de Papel', '1899', 'Dark', 'Stranger Things', 'Squid Gam
 const show = [];
 
 export const showInfo = async () => {
-  for(let i=0; i<shows.length; i+=1){
-    const data = await showData([shows[i]])
-    show.push(data)
+  for (let i = 0; i < shows.length; i += 1) {
+    const data = await showData([shows[i]]);
+    show.push(data);
   }
   return show;
 };
@@ -74,4 +74,3 @@ const displayShows = async () => {
 };
 
 export default displayShows;
-
