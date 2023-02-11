@@ -2,7 +2,7 @@ import { showData, getLikes } from './api';
 // involvement API for POST
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OX5sTwXK5eU2vy1wOpri/likes';
 
-const shows = ['La Casa de Papel', '1899', 'Dark', 'Stranger Things', 'Squid Game', 'Ginny & Georgia'];
+const shows = [27436, 39749, 17861, 2993, 43687, 47549]; //  TVmaze ids
 
 const show = [];
 
