@@ -1,6 +1,7 @@
 import { getDescription, getComments } from './comment_handler.js';
 
 window.addEventListener('load', () => { //  Waits until page is loaded completely, including images.
+  console.log('loaded', document.readyState);
   const btnComments = document.querySelectorAll('.comment');
   const popUpContainer = document.querySelector('.comment_pop-up_container');
   //  const id = document.querySelector('.description_content__movie_title');

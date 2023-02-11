@@ -33,14 +33,15 @@ const getComments = async (id) => {
   commentDiv.id = 'posted-comments';
   commentDiv.innerHTML = '';
   Object.keys(data).forEach((key) => {
-    commentDiv.innerHTML += `${data[key].creation_date} ${data[key].username}: ${data[key].comment}. <br>`;
-    commentText.appendChild(commentDiv);
+    commentDiv.innerHTML += `<div>${data[key].creation_date} ${data[key].username}: ${data[key].comment}.</div>`;
   });
+  commentText.appendChild(commentDiv);
 };
 
 const addToAPI = async (id, user, com) => {
   const status = await postComment(id, user, com);
   if (status !== 201) return `Error ${status}`;
+  console.log(status);
   return status;
 };
 
