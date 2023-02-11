@@ -25,6 +25,12 @@ const getDescription = async (id) => {
   ratingGenres.innerHTML += `Rate: ${data.rating.average}`;
 };
 
+const countComments = () => {
+  const count = document.querySelector('#posted-comments').children.length;
+  const commentHeader = document.querySelector('#comments-header');
+  commentHeader.innerHTML = `Comments(${count})`;
+};
+
 const getComments = async (id) => {
   //  console.log('ID', id);
   const data = await showDataInvolvement(id);
@@ -36,6 +42,7 @@ const getComments = async (id) => {
     commentDiv.innerHTML += `<div>${data[key].creation_date} ${data[key].username}: ${data[key].comment}.</div>`;
   });
   commentText.appendChild(commentDiv);
+  countComments();
 };
 
 const addToAPI = async (id, user, com) => {
