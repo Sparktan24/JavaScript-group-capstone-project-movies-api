@@ -1,3 +1,4 @@
+import commentButtons from './comments-button_handler.js';
 import { showData, getLikes } from './api';
 // involvement API for POST
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OX5sTwXK5eU2vy1wOpri/likes';
@@ -18,7 +19,7 @@ const showInfo = async () => {
     /*eslint-disable */
 
     //suppress all warnings between comments
-    const data = await showData([shows[i]]); 
+    const data = await showData([shows[i]]);
 
     /* eslint-enable */
     show.push(data);
@@ -63,26 +64,31 @@ const likeBtn = () => {
 };
 
 const displayShows = async () => {
-  const show = await currentLikes();
   const container = document.querySelector('.container');
+  let show = await currentLikes();
   container.innerHTML = '';
-  for (let i = 0; i < show.length; i += 1) {
+
+  for (const i of show) {
     container.innerHTML += `
-        <article class="article" id="${show[i].id}">
-        <img src=${show[i].image.medium}>
-        <div class="title" id="${show[i].id}">
-        <h2>${show[i].name}</h2>
-        <div class="likes">
-        <i class="fa-sharp fa-regular fa-heart like" id="${show[i].id}"></i>
-        <p id="${show[i].id}counter">${show[i].likes || 0} likes</p>
-        </div>
-        </div>
-        <button class="comment">Comments</button>
-        </article>
-        `;
+          <article class="article" id="${i.id}">
+          <img src=${i.image.medium}>
+          <div class="title" id="${i.id}">
+          <h2>${i.name}</h2>
+          <div class="likes">
+          <i class="fa-sharp fa-regular fa-heart like" id="${i.id}"></i>
+          <p id="${i.id}counter">${i.likes || 0} likes</p>
+          </div>
+          </div>
+          <button class="comment">Comments</button>
+          </article>
+          `;
+    commentButtons();
   }
+
+
   likeBtn();
   showsCount();
 };
 
 displayShows();
+

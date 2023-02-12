@@ -1,5 +1,4 @@
 import { showData, showDataInvolvement, postComment } from './api.js';
-//  import showDataInvolvement from './comments-pop-up-comments-section_handler.js';
 
 const getDescription = async (id) => {
   const data = await showData(id);
@@ -32,7 +31,6 @@ const countComments = () => {
 };
 
 const getComments = async (id) => {
-  //  console.log('ID', id);
   const data = await showDataInvolvement(id);
   const commentText = document.querySelector('.comments-container');
   const commentDiv = document.createElement('div');
@@ -65,7 +63,6 @@ form.onsubmit = (e) => {
   const com = comment.value;
   const { id } = itemId;
   addToAPI(id, user, com);
-  //  postComment(id, user, com);
   commentText.firstChild.remove();
   getComments(id);
   form.reset();
