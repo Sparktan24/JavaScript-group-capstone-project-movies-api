@@ -1,10 +1,9 @@
 import commentButtons from './comments-button_handler.js';
-import { showData, getLikes } from './api';
+import { showData, getLikes } from './api.js';
 // involvement API for POST
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OX5sTwXK5eU2vy1wOpri/likes';
 
 const shows = [27436, 39749, 17861, 2993, 43687, 47549]; //  TVmaze ids
-// const tvShows = ['La Casa de Papel', '1899', 'Dark', 'Stranger Things', 'Squid Game', 'Ginny & Georgia'];
 
 const show = [];
 
@@ -65,10 +64,10 @@ const likeBtn = () => {
 
 const displayShows = async () => {
   const container = document.querySelector('.container');
-  let show = await currentLikes();
+  const show = await currentLikes();
   container.innerHTML = '';
 
-  for (const i of show) {
+  show.forEach((i) => {
     container.innerHTML += `
           <article class="article" id="${i.id}">
           <img src=${i.image.medium}>
@@ -82,13 +81,27 @@ const displayShows = async () => {
           <button class="comment">Comments</button>
           </article>
           `;
-    commentButtons();
-  }
+  });
 
+  /*   for (const i of show) {
+      container.innerHTML += `
+            <article class="article" id="${i.id}">
+            <img src=${i.image.medium}>
+            <div class="title" id="${i.id}">
+            <h2>${i.name}</h2>
+            <div class="likes">
+            <i class="fa-sharp fa-regular fa-heart like" id="${i.id}"></i>
+            <p id="${i.id}counter">${i.likes || 0} likes</p>
+            </div>
+            </div>
+            <button class="comment">Comments</button>
+            </article>
+            `;
+    } */
 
   likeBtn();
   showsCount();
+  commentButtons();
 };
 
 displayShows();
-

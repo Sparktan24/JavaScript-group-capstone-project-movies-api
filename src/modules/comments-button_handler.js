@@ -1,7 +1,6 @@
 import { getDescription, getComments } from './comment_handler.js';
 
 const commentsButtons = () => {
-
   const btnComments = document.querySelectorAll('.comment');
   const popUpContainer = document.querySelector('.comment_pop-up_container');
   btnComments.forEach((element) => {
@@ -11,10 +10,9 @@ const commentsButtons = () => {
       popUpContainer.classList.toggle('hidden');
     });
   });
-}
+};
 
 export default commentsButtons;
-
 
 //  CLOSE BUTTON POP-UP
 const btnClose = document.querySelector('#close-btn');

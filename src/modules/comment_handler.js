@@ -46,7 +46,6 @@ const getComments = async (id) => {
 const addToAPI = async (id, user, com) => {
   const status = await postComment(id, user, com);
   if (status !== 201) return `Error ${status}`;
-  console.log(status);
   return status;
 };
 
