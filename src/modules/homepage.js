@@ -85,4 +85,4 @@ const displayShows = async () => {
   showsCount();
 };
 
-export default displayShows;
+export{showsCount, displayShows} 
