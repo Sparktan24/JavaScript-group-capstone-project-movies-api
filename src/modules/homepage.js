@@ -2,8 +2,8 @@ import { showData, getLikes } from './api';
 // involvement API for POST
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OX5sTwXK5eU2vy1wOpri/likes';
 
-// const shows = [27436, 39749, 17861, 2993, 43687, 47549]; //  TVmaze ids
-const tvShows = ['La Casa de Papel', '1899', 'Dark', 'Stranger Things', 'Squid Game', 'Ginny & Georgia'];
+const shows = [27436, 39749, 17861, 2993, 43687, 47549]; //  TVmaze ids
+// const tvShows = ['La Casa de Papel', '1899', 'Dark', 'Stranger Things', 'Squid Game', 'Ginny & Georgia'];
 
 const show = [];
 
@@ -13,12 +13,12 @@ const showsCount = async () => {
   addCount.innerHTML = `Top binge-worthy shows (${shows})`;
 };
 
-export const showInfo = async () => {
-  for (let i = 0; i < tvShows.length; i += 1) {
+const showInfo = async () => {
+  for (let i = 0; i < shows.length; i += 1) {
     /*eslint-disable */
 
     //suppress all warnings between comments
-    const data = await showData([tvShows[i]]); 
+    const data = await showData([shows[i]]); 
 
     /* eslint-enable */
     show.push(data);
@@ -68,7 +68,7 @@ const displayShows = async () => {
   container.innerHTML = '';
   for (let i = 0; i < show.length; i += 1) {
     container.innerHTML += `
-        <article class="article">
+        <article class="article" id="${show[i].id}">
         <img src=${show[i].image.medium}>
         <div class="title" id="${show[i].id}">
         <h2>${show[i].name}</h2>
@@ -85,4 +85,4 @@ const displayShows = async () => {
   showsCount();
 };
 
-export default displayShows;
+displayShows();
