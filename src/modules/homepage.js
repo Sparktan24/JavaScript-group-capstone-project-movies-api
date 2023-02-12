@@ -105,3 +105,5 @@ const displayShows = async () => {
 };
 
 displayShows();
+
+export default showsCount;
