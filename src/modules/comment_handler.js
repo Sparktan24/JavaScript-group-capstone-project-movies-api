@@ -67,4 +67,4 @@ form.onsubmit = (e) => {
   form.reset();
 };
 
-export { getDescription, getComments };
+export { getDescription, getComments, countComments };
