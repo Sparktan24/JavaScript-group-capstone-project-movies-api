@@ -17,7 +17,7 @@ The JavaScript capstone project is about building my own web application based o
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](Not available)
 
 <!-- Features -->
 
