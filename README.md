@@ -1,11 +1,11 @@
-
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 JavaScript Group Project
 
- The JavaScript capstone project is about building my own web application based on an external API. The      webapp has 2 user interfaces: 
- - A home page showing a list of items that you can "like."
- - A popup window with more data about an item that you can use to comment on.
+The JavaScript capstone project is about building my own web application based on an external API. The webapp has 2 user interfaces:
+
+- A home page showing a list of items that you can "like."
+- A popup window with more data about an item that you can use to comment on.
 
 ## Built With
 
@@ -21,7 +21,7 @@
 
 <!-- Features -->
 
-### Key Features 
+### Key Features
 
 - **[Git Flow]**
 - **[Good HTML, CSS and JS practices]**
@@ -29,10 +29,9 @@
 
 <!-- GETTING STARTED -->
 
-## 💻 Getting Started 
+## 💻 Getting Started
 
 Clone this repository to get started with the project, make sure to configure linters by following the instructions in the [Linters README file](https://github.com/microverseinc/linters-config/blob/master/README.md)
-
 
 ### Setup
 
@@ -45,16 +44,16 @@ Clone this repository to get started with the project, make sure to configure li
 
 To run the project, execute the following command:
 
-   - <code>npm run start</code> in your terminal.
+- <code>npm run start</code> in your terminal.
 
 ### Run tests
 
 - After pushing the changes on github, merge your pull request and let github action process changes and fix errors, if any.
-- For stylelint errors run:<code>sudo npx stylelint "**/*.{css,scss}" --fix</code> for automatic fix.
+- For stylelint errors run:<code>sudo npx stylelint "\*_/_.{css,scss}" --fix</code> for automatic fix.
 
 <!-- AUTHORS -->
 
-## 👥 Authors 
+## 👥 Authors
 
 👤 **Ashmal Zahra**
 
@@ -62,29 +61,28 @@ To run the project, execute the following command:
 - Twitter: [@twitterhandle](https://twitter.com/AshmalZahraa)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ashmal-zahra-35bb09242/)
 
-👤 ** **
+👤 **Jesus Molina**
 
-- GitHub: [@githubhandle]()
-- Twitter: [@twitterhandle]()
-- LinkedIn: [LinkedIn]()
+- GitHub: [@Sparktan24](https://github.com/Sparktan24)
+- Twitter: [@Sparktan1](https://twitter.com/Sparktan1)
+- LinkedIn: [Jesus Molina](https://www.linkedin.com/in/jesus-molina-2b104424a/)
 
 <!-- CONTRIBUTING -->
 
-## 🤝 Contributing 
+## 🤝 Contributing
+
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/ashmalzahra/group-capstone-project/issues).
 
 <!-- SUPPORT -->
 
-## ⭐️ Show your support 
+## ⭐️ Show your support
 
 Give a ⭐️ if you like this project!
 
 <!-- LICENSE -->
 
-## 📝 License 
+## 📝 License
 
 This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
-
-
