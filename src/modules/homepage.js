@@ -1,9 +1,9 @@
-import { showData, getLikes } from './api';
+import commentButtons from './comments-button_handler.js';
+import { showData, getLikes } from './api.js';
 // involvement API for POST
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OX5sTwXK5eU2vy1wOpri/likes';
 
-// const shows = [27436, 39749, 17861, 2993, 43687, 47549]; //  TVmaze ids
-const tvShows = ['La Casa de Papel', '1899', 'Dark', 'Stranger Things', 'Squid Game', 'Ginny & Georgia'];
+const shows = [27436, 39749, 17861, 2993, 43687, 47549]; //  TVmaze ids
 
 const show = [];
 
@@ -13,12 +13,12 @@ const showsCount = async () => {
   addCount.innerHTML = `Top binge-worthy shows (${shows})`;
 };
 
-export const showInfo = async () => {
-  for (let i = 0; i < tvShows.length; i += 1) {
+const showInfo = async () => {
+  for (let i = 0; i < shows.length; i += 1) {
     /*eslint-disable */
 
     //suppress all warnings between comments
-    const data = await showData([tvShows[i]]); 
+    const data = await showData([shows[i]]);
 
     /* eslint-enable */
     show.push(data);
@@ -63,26 +63,45 @@ const likeBtn = () => {
 };
 
 const displayShows = async () => {
-  const show = await currentLikes();
   const container = document.querySelector('.container');
+  const show = await currentLikes();
   container.innerHTML = '';
-  for (let i = 0; i < show.length; i += 1) {
+
+  show.forEach((i) => {
     container.innerHTML += `
-        <article class="article">
-        <img src=${show[i].image.medium}>
-        <div class="title" id="${show[i].id}">
-        <h2>${show[i].name}</h2>
-        <div class="likes">
-        <i class="fa-sharp fa-regular fa-heart like" id="${show[i].id}"></i>
-        <p id="${show[i].id}counter">${show[i].likes || 0} likes</p>
-        </div>
-        </div>
-        <button class="comment">Comments</button>
-        </article>
-        `;
-  }
+          <article class="article" id="${i.id}">
+          <img src=${i.image.medium}>
+          <div class="title" id="${i.id}">
+          <h2>${i.name}</h2>
+          <div class="likes">
+          <i class="fa-sharp fa-regular fa-heart like" id="${i.id}"></i>
+          <p id="${i.id}counter">${i.likes || 0} likes</p>
+          </div>
+          </div>
+          <button class="comment">Comments</button>
+          </article>
+          `;
+  });
+
+  /*   for (const i of show) {
+      container.innerHTML += `
+            <article class="article" id="${i.id}">
+            <img src=${i.image.medium}>
+            <div class="title" id="${i.id}">
+            <h2>${i.name}</h2>
+            <div class="likes">
+            <i class="fa-sharp fa-regular fa-heart like" id="${i.id}"></i>
+            <p id="${i.id}counter">${i.likes || 0} likes</p>
+            </div>
+            </div>
+            <button class="comment">Comments</button>
+            </article>
+            `;
+    } */
+
   likeBtn();
   showsCount();
+  commentButtons();
 };
 
-export default displayShows;
+displayShows();
