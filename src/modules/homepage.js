@@ -104,10 +104,6 @@ const displayShows = async () => {
   commentButtons();
 };
 
-<<<<<<< HEAD
-displayShows()
-
-export default showsCount
-=======
 displayShows();
->>>>>>> develop
+
+export default showsCount;
