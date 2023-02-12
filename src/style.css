@@ -152,7 +152,6 @@ footer {
   width: 85%;
   height: 90%;
   overflow: auto;
-  max-width: 600px;
 }
 
 .hidden {
