@@ -1,6 +1,5 @@
 /** @jest-environment jsdom */
-
-import { showsCount } from './homepage';
+import showsCount from './homepage';
 
 describe('Homepage items counter Tests', () => {
   document.body.innerHTML = `
@@ -11,9 +10,9 @@ describe('Homepage items counter Tests', () => {
 </main>
 `;
 
-  it('Should test if showsCount() is adding all items counter to the home page', () => {
-    const counter = document.querySelector('.count-shows');
-    showsCount();
-    expect(counter.innerHTML).toBe('Top binge-worthy shows (2)');
-  });
+it('Should test if showsCount() is adding all items counter to the home page', () => {
+const counter = document.querySelector('.count-shows');
+showsCount();
+expect(counter.innerHTML).toBe('Top binge-worthy shows (2)');
+});
 });
