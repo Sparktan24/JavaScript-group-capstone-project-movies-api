@@ -111,6 +111,30 @@ footer {
   right: 8%;
 }
 
+#btn-input-comment {
+  border: none;
+  height: 30px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+  cursor: pointer;
+  width: 8rem;
+}
+
+#comment-user-name-input {
+  height: 24px;
+  width: 13rem;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 16%) 0 1px 4px;
+}
+
+#textArea-comment {
+  width: 500px;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 16%) 0 1px 4px;
+}
+
 .comment_pop-up_container {
   display: flex;
   flex-direction: column;
@@ -124,10 +148,11 @@ footer {
 
 .comment_main-content {
   padding: 2rem;
-  background-color: blanchedalmond;
+  background-color: #dbd9d5;
   width: 85%;
   height: 90%;
   overflow: auto;
+  max-width: 600px;
 }
 
 .hidden {
@@ -137,6 +162,7 @@ footer {
 #form {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 #posted-comments {
