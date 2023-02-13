@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+* {
+  color: black;
+  font-family: 'Paytone One', sans-serif;
+  font-weight: 100;
+}
+
+html {
+  background: radial-gradient(#000000a3, transparent);
+}
+
+header {
+  margin-bottom: 4%;
+  background: darkgray;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 12%;
+  line-height: 50px;
+  margin-top: 0;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  margin-bottom: 0;
+}
+
+li {
+  font-size: larger;
+}
+
+.fa-circle-play {
+  font-size: 50px;
+}
+
+li :active {
+  text-decoration: underline;
+}
+
+.container {
+  display: grid;
+  grid: auto auto / auto auto auto;
+  justify-content: space-around;
+}
+
+article {
+  margin-bottom: 10%;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.fa-heart {
+  margin-top: 40%;
+  font-size: 20px;
+  margin-left: 35%;
+}
+
+.like:hover {
+  color: #ff0000bf;
+}
+
+.likes {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment {
+  display: flex;
+  border: 2px solid black;
+  padding: 5px 55px;
+  margin: 0 auto;
+  background: transparent;
+  box-shadow: 2px 3px black;
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+}
+
+footer {
+  margin-top: 4%;
+  background: darkgray;
+  padding: 24px 0;
+  box-shadow: rgb(0 0 0 / 31%) 0 5px 11px;
+}
+
+.footer_content {
+  margin-left: 3rem;
+  font-size: larger;
+}
+
+.footer-description {
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#close-btn {
+  position: fixed;
+  right: 8%;
+}
+
+#btn-input-comment {
+  border: none;
+  height: 30px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+  cursor: pointer;
+  width: 8rem;
+}
+
+#comment-user-name-input {
+  height: 24px;
+  width: 13rem;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 16%) 0 1px 4px;
+}
+
+#textArea-comment {
+  width: 500px;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 16%) 0 1px 4px;
+}
+
+.comment_pop-up_container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 1rem;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.comment_main-content {
+  padding: 2rem;
+  background-color: #dbd9d5;
+  width: 85%;
+  height: 90%;
+  overflow: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#posted-comments {
+  overflow: auto;
+  height: 10vh;
+}
