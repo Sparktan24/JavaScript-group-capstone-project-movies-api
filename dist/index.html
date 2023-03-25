@@ -4,31 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/db139aff16.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
   <script defer src="runtime.js"></script><script defer src="main.js"></script></head>
   <body>
-    <h1>Test</h1>
-    <button class="comment">comments</button>
+    <header>
+      <nav>
+        <ul>
+          <li><i class="fa-solid fa-circle-play"></i></li>
+          <li class="count-shows"></li>
+          <li>Best of 2022</li>
+          <li>Mark your Calender</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container"></main>
 
-    <div class="comment_pop-up_container">
+    <div class="comment_pop-up_container hidden">
       <div class="comment_main-content">
-        <div class="description_content">
-          <img
-            src="https://static.tvmaze.com/uploads/images/medium_portrait/422/1055108.jpg"
-            alt=""
-          />
+        <section class="description_content">
+          <img id="comment-image" src="" alt="" />
           <button id="close-btn">⨯</button>
-          <h2>Movie: 1899</h2>
+          <h2 class="description_content__movie_title"></h2>
+          <div class="rating-genres"></div>
           <h3>Description:</h3>
-          <p>
-            1899. A migrant steamship heads west to leave the old continent. The
-            passengers, a mixed bag of European origins, united by their hopes
-            and dreams for the new century and their future abroad. But their
-            journey takes an unexpected turn when they discover another migrant
-            ship adrift on open sea. What they will find on board, will turn
-            their passage to the promised land into a horrifying nightmare.
-          </p>
-        </div>
+          <p id="description"></p>
+        </section>
+
+        <section class="comments-section">
+          <h3 id="comments-header">Comments (N)</h3>
+          <div class="comments-container"></div>
+          <div class="add-comments-container">
+            <h3>Add a comment</h3>
+            <form id="form" action="" method="post">
+              <input
+                id="comment-user-name-input"
+                type="text"
+                placeholder="Your name"
+              />
+              <textarea
+                name="comment"
+                id="textArea-comment"
+                cols="30"
+                rows="3"
+                placeholder="Your insights"
+              ></textarea>
+              <button id="btn-input-comment">Comment</button>
+            </form>
+          </div>
+        </section>
       </div>
     </div>
   </body>
