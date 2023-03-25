@@ -6,6 +6,7 @@
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
+    - [🚀 Live Demo ](#-live-demo-)
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -36,7 +37,7 @@ The JavaScript capstone project is about building my own web application based o
 
 ## Live Demo
 
-[Live Demo Link](Not available)
+[Live Demo Link](https://tv-shows.onrender.com/)
 
 <!-- Features -->
 
@@ -121,6 +122,6 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
